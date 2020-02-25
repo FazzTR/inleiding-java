@@ -7,37 +7,37 @@ public class Opdracht1 extends Applet {
     Color opvulkleur;
     Color lijnkleur;
     int height;
-    int breedte;
+    int width;
 
     public void init() {
         opvulkleur = Color.MAGENTA;
         lijnkleur = Color.BLACK;
          height = 80;
-         breedte = 200;
+         width = 200;
 
     }
 
     public void paint(Graphics g) {
 
         setBackground(Color.white);
-        g.drawLine(5, 5, 200, 5);
+        g.drawLine(5, 5, width, 5);
         g.drawString("Lijn", 100, 20);
-        g.drawRect(5, 30, 200, 80);
+        g.drawRect(5, 30, width, height);
         g.drawString("Rechthoek", 75, 130);
         g.setColor(opvulkleur);
-        g.fillRect(210, 30, 200, 80);
+        g.fillRect(210, 30, width, height);
         g.setColor(lijnkleur);
-        g.drawOval(210, 30, 200, 80);
+        g.drawOval(210, 30, width, height);
         g.drawString("Gevulde rechthoek met ovaal", 225, 130);
         g.setColor(opvulkleur);
-        g.fillArc(415, 30, 200, 80, 90, 45);
+        g.fillArc(415, 30, width, height, 90, 45);
         g.setColor(lijnkleur);
-        g.drawOval(415, 30, 200, 80);
+        g.drawOval(415, 30, width, height);
         g.drawString("Taartpunt met ovaal eromheen", 450, 130);
-        g.drawRoundRect(5, 150, 200, 80, 20, 20);
+        g.drawRoundRect(5, 150, width, height, 20, 20);
         g.drawString("Afgeronde rechthoek", 25, 250);
         g.setColor(opvulkleur);
-        g.fillOval(210, 150, 200, 80);
+        g.fillOval(210, 150, width, height);
         g.setColor(lijnkleur);
         g.drawString("Gevulde ovaal", 260, 250);
         g.setColor(lijnkleur);

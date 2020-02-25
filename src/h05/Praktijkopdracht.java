@@ -6,6 +6,7 @@ import java.awt.*;
 public class Praktijkopdracht extends Applet {
 
     public void init() {
+        int height = 10;
 
 
     }
@@ -16,7 +17,7 @@ public class Praktijkopdracht extends Applet {
         g.drawRect(5, 30, 200, 80);
         g.drawString("Rechthoek", 75, 130);
         g.setColor(Color.magenta);
-        g.fillRect(210, 30, 200, 80);
+        g.fillRect(210, 30, 200, getHeight());
         g.setColor(Color.black);
         g.drawOval(210, 30, 200, 80);
         g.drawString("Gevulde rechthoek met ovaal", 225, 130);

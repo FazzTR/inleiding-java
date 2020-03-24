@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class Praktijkopdracht extends Applet {
 
     Button plus, min, keer, deel;
-    TextField tekstvak1, tekstvak2, tekstvak3;
+    TextField tekstvak1, tekstvak2;
     Double eersteGetal, tweedeGetal;
 
 

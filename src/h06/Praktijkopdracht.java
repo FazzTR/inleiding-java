@@ -14,7 +14,8 @@ public class Praktijkopdracht extends Applet {
         uitkomst = a + b + c / 3;
     }
 
-    public void paint(Graphics g) {
+    public void paint(Graphics g)
+    {
         g.drawString("De uitkomst is: " + uitkomst, 20, 20);
     }
 }

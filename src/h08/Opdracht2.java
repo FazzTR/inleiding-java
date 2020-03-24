@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 public class Opdracht2 extends Applet {
 
     Button manknop, vrouwknop, jongensknop, meisjesknop;
-    TextField tekst;
     int aantalMannen, aantalVrouwen, aantalJongens, aantalMeisjes, totaal;
 
         public void init() {
@@ -22,8 +21,6 @@ public class Opdracht2 extends Applet {
             aantalMeisjes = 0;
             totaal = 0;
             //KNOPPEN
-            tekst = new TextField(20);
-            add(tekst);
             manknop = new Button("Mannen");
             manknop.addActionListener(new manknopListener());
             add(manknop);

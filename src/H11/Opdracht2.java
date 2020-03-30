@@ -11,17 +11,15 @@ public class Opdracht2 extends Applet {
 
     public void paint(Graphics g) {
 
-        g.drawString("10", 20, 30);
-        g.drawString("11", 20, 50);
-        g.drawString("12", 20, 70);
-        g.drawString("13", 20, 90);
-        g.drawString("14", 20, 110);
-        g.drawString("15", 20, 130);
-        g.drawString("16", 20, 150);
-        g.drawString("17", 20, 170);
-        g.drawString("18", 20, 190);
-        g.drawString("19", 20, 210);
-        g.drawString("20", 20, 230);
+        int teller = 10;
+        int x = 50;
+        int y = 70;
+
+        while (teller < 20) {
+            g.drawString("" + teller, x, y);
+            teller++;
+            y += 20;
+        }
 
 
     }

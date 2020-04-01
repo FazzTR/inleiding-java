@@ -5,18 +5,19 @@ import java.awt.*;
 
 public class Opdracht8 extends Applet {
 
+    public void paint (Graphics g) {
 
-    public void init() {
+        int y = 20 , x = 20 ;
 
-    }
+        for (int teller= 0 ; teller <= 100; teller++){
 
-    public void paint(Graphics g) {
+            y +=10;
+            x +=10;
 
-        int teller;
-        
-
-
+            g.drawOval(20, 20, x, y);
 
 
+
+        }
     }
 }

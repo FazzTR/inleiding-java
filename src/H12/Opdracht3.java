@@ -17,8 +17,8 @@ public class Opdracht3 extends Applet {
 
     public void init() {
 
-        tekstvakken = new TextField[6];
-        getallen = new int[6];
+        tekstvakken = new TextField[5];
+        getallen = new int[5];
         knop = new Button("OK");
         knop.addActionListener(new KnopListener());
         add(knop);

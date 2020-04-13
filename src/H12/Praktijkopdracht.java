@@ -2,23 +2,67 @@ package H12;
 
 import java.applet.Applet;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Praktijkopdracht extends Applet {
 
-    TextField tekstvak1, tekstvak2;
-    Button knop;
-    int getal;
-    String[] namen;
+    String[] namen, telnummers;
+    Button knopOK;
+    Label labelnaam, labeltelnr;
+    TextField tekstvaknaam, tekstvaktelnr;
+    int index;
+
 
     public void init() {
+        
+        namen = new String[10];
+        telnummers = new String[10];
 
-        tekstvak1 = new TextField("Naam", 20);
-        tekstvak2 = new TextField("Nummer", 20);
+        labelnaam = new Label("Naam");
+        add(labelnaam);
+        tekstvaknaam = new TextField(20);
+        add(tekstvaknaam);
+        labeltelnr = new Label("telefoon nummer");
+        add(labeltelnr);
+        tekstvaktelnr = new TextField(10);
+        add(tekstvaktelnr);
 
+        knopOK = new Button("OK");
+        KnopOKpraktijkopdrachtlistener cc = new KnopOKpraktijkopdrachtlistener();
+        knopOK.addActionListener(cc);
+        add(knopOK);
 
     }
 
     public void paint(Graphics g) {
+        int x = 50;
+        int x2 = 100;
+        int y = 120;
 
+        if (index == 10) {
+            for (int i = 0; i < namen.length; i++) {
+                g.drawString(namen[i], x, y);
+                g.drawString(telnummers[i], x2, y);
+                y += 20;
+            }
+
+        }
+
+    }
+
+    class KnopOKpraktijkopdrachtlistener implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            String s = tekstvaknaam.getText();
+            namen[index] = s;
+            String d = tekstvaktelnr.getText();
+            telnummers[index] = d;
+            index++;
+
+            if (index ==10) {
+                repaint();
+            }
+        }
     }
 }

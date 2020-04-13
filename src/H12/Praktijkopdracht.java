@@ -15,7 +15,7 @@ public class Praktijkopdracht extends Applet {
 
 
     public void init() {
-        
+
         namen = new String[10];
         telnummers = new String[10];
 
